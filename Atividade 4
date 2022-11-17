@@ -1,0 +1,17 @@
+def printTabuleiro(num1):
+    for coluna in range(5):
+        print(num1[coluna])
+tabuleiro = [
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0]
+]
+for linhas in range(5):
+    for colunas in range(5):
+        if linhas == colunas:
+            tabuleiro[linhas][colunas] = 1
+        else:
+            tabuleiro[linhas][colunas] = 0
+printTabuleiro(tabuleiro)
