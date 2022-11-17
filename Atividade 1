@@ -1,0 +1,14 @@
+tamanhod = int(input("Digite o tamanho da lista: "))
+def create(tamanho):
+    lista = []
+    for i in range(tamanho):
+        lista.append(0*tamanho)
+    return lista
+listafinal = create(tamanhod)
+for i in range(tamanhod):
+    valor = int(input("Digite um valor inteiro: "))
+    listafinal[i] = valor
+print("A lista original é: " +str(listafinal))
+print("A lista ordenada é: " + str(sorted(listafinal)))
+print("A soma dos valores é: " + str(sum(listafinal)))
+print("O maior número é: " + str(max(listafinal)))
