@@ -1,0 +1,22 @@
+def printMatriz(num1):
+    for coluna in range(colunas):
+        print(num1[coluna])
+def create(lin, col):
+    matriz = []
+    for i in range(col):
+        matriz.append(lin * [0])
+    return matriz
+pares = 0
+maior = []
+linhas = int(input("Digite a quantidade de linhas da matriz: "))
+colunas = int(input("Digite a quantidade de colunas da matriz: "))
+matriz = create(linhas, colunas)
+for linhasindice in range(linhas):
+    for colunasindice in range(colunas):
+        matriz[linhasindice][colunasindice] = int(input("Digite um valor inteiro para preencher esta matriz"))
+        maior.append(matriz[linhasindice][colunasindice])
+        if matriz[linhasindice][colunasindice] % 2 == 0:
+            pares += 1
+printMatriz(matriz)
+print("A quantidade de valores pares é: " + str(pares))
+print("O maior valor da matriz é: " + str(max(maior)))
